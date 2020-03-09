@@ -1,0 +1,22 @@
+body { 
+    background-image: url("16234713.jpg");
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  #start {
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      background-color: #e7e7e7;
+      color: black;
+      border-radius: 50%;
+  }
+
+  
