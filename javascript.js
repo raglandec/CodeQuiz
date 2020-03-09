@@ -49,17 +49,17 @@ $(document).ready(function () {
             quiz.counter--;
             $('#counter').html(quiz.counter);
             if (quiz.counter <= 0) {
-                console.log("Time Up!");
+                console.log("Your time is up!");
                 quiz.timeUp();
             }
         },
         // loads the question onto the page; first step after I setup the countdown() method
         loadQuestion: function () {
             timer = setInterval(quiz.countdown, 1000);
-            $("#subwrapper").html("<h2> TIME REMAINING <span id='counter'> 30 </span> Seconds</h2>");
+            $("#subwrapper").html("<h2> REMAINING TIME <span id='counter'>30</span> Seconds</h2>");
             $("#subwrapper").append("<h2>" + questions[quiz.currentQuestion].question + "<h2>");
             for (i = 0; i < questions[quiz.currentQuestion].answers.length; i++) {
-                $("#subwrapper").append('<button class="answer-button" id= "button- ' + i + ' " data-name= " ' + questions[quiz.currentQuestion].answers[i] + ' " > ' + questions[quiz.currentQuestion].answers[i] + ' </button>');
+                $("#subwrapper").append('<button class="answer-button" id= "button- ' +i+ '"data-name="' + questions[quiz.currentQuestion].answers[i] + '">' + questions[quiz.currentQuestion].answers[i] + '</button>');
             }
         },
 
