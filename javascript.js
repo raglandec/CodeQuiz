@@ -5,34 +5,34 @@ $(document).ready(function () {
         quiz.loadQuestion();
     })
 
-    $(document).on("click", "answer-button", function (e) {
+    $(document).on("click", ".answer-button", function (e) {
         quiz.clicked(e);
     })
 
-    $(document).on("click", "reset", function () {
+    $(document).on("click", "#reset", function () {
         quiz.reset();
     })
 
     var questions = [{
         question: "Which is NOT a programming language that we have learned?",
         answers: ["HTML", "CSS", "Javascript", "Java"],
-        correct: "Java"
+        correctAnswer: "Java"
     }, {
         question: "A set of statements that performs a task or calculates a value is a _____________ .",
         answers: ["method", "class", "function", "variable"],
-        correct: "function"
+        correctAnswer: "function"
     }, {
         question: "Actions that can be performed on objects are called __________.",
         answers: ["classes", "strings", "methods", "variables"],
-        correct: "methods"
+        correctAnswer: "methods"
     }, {
         question: "A ________ is a blueprint or prototype that defines the variables and the methods.",
         answers: ["function", "class", "string", "boolean"],
-        correct: "class"
+        correctAnswer: "class"
     }, {
         question: "A method used to generate a random number is __________.",
         answers: ["Math.pow()", "Math.max()", "Math.random()", "Math.sqrt()"],
-        correct: "Math.random()"
+        correctAnswer: "Math.random()"
     }
     ];
 
@@ -74,7 +74,7 @@ $(document).ready(function () {
             clearInterval(timer);
             quiz.unanswered++;
             $("#subwrapper").html("<h2>OUT OF TIME!</h2>");
-            $("#subwrapper").append("<h3>The Correct Answer Was: " + questions[quiz.currentQuestion].correct + "</h3>");
+            $("#subwrapper").append("<h3>The Correct Answer Was: " + questions[quiz.currentQuestion].correctAnswer + "</h3>");
             if (quiz.currentQuestion == questions.length - 1) {
                 setTimeout(quiz.results, 3 * 1000);
             } else {
@@ -86,13 +86,15 @@ $(document).ready(function () {
             clearInterval(timer);
             $("#subwrapper").html("<h2>ALL DONE!</h2>");
             $("#subwrapper").append("<h3>Correct: " + quiz.correct + "</h3>");
-            $("#subwrapper").append("<h3>Incorrect: " + quiz.Incorrect + "</h3>");
+            $("#subwrapper").append("<h3>Incorrect: " + quiz.incorrect + "</h3>");
+            $("#subwrapper").append("<h3>Unanswered:  " + quiz.unanswered + "</h3>");
+            // new update 
             $("#subwrapper").append("<button id='reset'> RESET </button>")
         },
 
         clicked: function (e) {
             clearInterval(timer);
-            if ($(e.target).data("name") == questions[quiz.currentQuestion].correct) {
+            if ($(e.target).data("name") == questions[quiz.currentQuestion].correctAnswer) {
                 quiz.answeredCorrectly();
             } else {
                 quiz.answeredIncorrectly();
@@ -116,7 +118,7 @@ $(document).ready(function () {
             clearInterval(timer);
             quiz.incorrect++;
             $("#subwrapper").html("<h2>Nah...</h2>");
-            $("#subwrapper").append("<h3>The correct answer was: " + questions[quiz.currentQuestion].correct + "</h3>");
+            $("#subwrapper").append("<h3>The correct answer was: " + questions[quiz.currentQuestion].correctAnswer + "</h3>");
             if (quiz.currentQuestion == questions.length - 1) {
                 setTimeout(quiz.results, 3 * 1000);
             } else{
