@@ -1,5 +1,5 @@
 body { 
-    font-family: Comic Sans MS, Comic Sans, cursive
+    font-family: Arial
 }
 
 .content {
@@ -16,7 +16,7 @@ button{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Comic Sans MS, Comic Sans, cursive;
+	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 24px;
@@ -33,7 +33,7 @@ button:active {
 }
 
 html { 
-	background: url(16234713.jpg) no-repeat center center fixed; 
+	background: url(16234713.png) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
