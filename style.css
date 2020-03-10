@@ -7,16 +7,11 @@ body {
     margin: auto;
   }
 
-  #start {
-      border: none;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      background-color: #e7e7e7;
-      color: black;
-      border-radius: 50%;
-  }
-
-  
+button{
+    color: black;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: hsl(294, 70%, 56%);
+    font-size: 110%;
+    border-radius: 50%;
+}
