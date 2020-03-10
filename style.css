@@ -1,5 +1,5 @@
 body { 
-    background-image: url("16234713.jpg");
+    font-family: Comic Sans MS, Comic Sans, cursive
 }
 
 .content {
@@ -16,7 +16,7 @@ button{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family:Comic Sans MS, Comic Sans, cursive;
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 24px;
@@ -31,3 +31,11 @@ button:active {
     position:relative;
 	top:1px;
 }
+
+html { 
+	background: url(16234713.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  }
